@@ -1,1 +1,6 @@
-
+EC2: Là serivce cung cấp tài nguyên server ảo theo yêu cầu
+- Tính tiện dụng
++ Đa dạng cấu hình (RAM/CPU/GPU/Network/Disk)
++ Triển khai dễ dàng
++ Khả năng mở không gần như không giới hạn (có $ là vụt)
++ Linh hoạt trong việc thanh toán chi phí
