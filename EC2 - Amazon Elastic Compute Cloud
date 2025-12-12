@@ -4,3 +4,29 @@ EC2: Là serivce cung cấp tài nguyên server ảo theo yêu cầu
 + Triển khai dễ dàng
 + Khả năng mở không gần như không giới hạn (có $ là vụt)
 + Linh hoạt trong việc thanh toán chi phí
+
+EC2 layer
++ Là máy chủ ảo hypervisor (ảo hóa) của AWS, bên dưới là phần cứng
++ Về cơ bản: người dùng chỉ quản lý EC2 từ cấp độ OS trở lên (windows, linux)
++ AWS sẽ không can thiệp vào dữ liệu từ tầng OS trở trên của EC2
++ EC2 hoạt động như 1 máy chủ độc lập và không thể access nếu như không có quyền
+
+Khái niệm cơ bản của EC2
++ AMI: Giống như 1 file ISO/Ghost chứa thông tin của hệ điều hành. EC2 được khởi động lên từ 1 AMI tương tự việc cài win
++ EBS Volume: Ổ cứng ảo được cấp phát bởi Amazon. Chỉ có thể đọc được dữ liệu khi được gắn vào 1 instance
++ Snapshot: Ảnh chụp của 1 EBS volume tại 1 thời điểm, có thể sử dụng để phục hồi dữ liệu khi có sự cố
++ Instance: Là máy chủ ảo được cấp phát tài nguyên CPU,RAM,GPU,... tùy theo dòng mà sẽ có một số giới hạn nhất định
+
+Các thao tác cơ bản đối với EC2
++ Launch instance
++ Reboot instance
++ Stop instance
++ Start instance
++ Terminate instance
+* Lưu ý: trạng thái TERMINATED không thể phục hồi lại được. Ổ cứng EBS gắn với instance tùy setting mà sẽ bị xóa hay không
++ Attach/Detach volume: có thể gắn thêm volume
++ Attach/Detach IP: gắn thêm hoặc gỡ bớt IP
++ Attach/Detach Security Group
++ Attach/Detach IAM Role
++ Create Snapshot from Volume
++ Create AMI from EC2 instance
