@@ -32,6 +32,14 @@ EC2: Là serivce cung cấp tài nguyên server ảo theo yêu cầu
 + Create AMI from EC2 instance
 
 Security groups (networking)
-+ Giới hạn truy cập đến EC2
++ Là tưởng lửa ảo (virtual firewall) kiểm soát lưu lượng mạng ra/vào của các tài nguyên AWS, thường dùng cho EC2, RDS, LB
++ Cho phép / chặn traffic Inbound (vào) và Outbound (ra)
++ Đại khái là giới hạn truy cập đến EC2 và từ EC2 đi ra bên ngoài
++ Kiểm soát theo:
+            - Protocol (TCP, UDP,...)
+            - Port (22, 80, 443…)
+            - Source / Destination (IP, CIDR, hoặc SG khác)
++ Một EC2 có thể gắn nhiều hơn 1 SG
+
 
 - AWS Console
