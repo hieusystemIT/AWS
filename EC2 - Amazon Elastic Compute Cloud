@@ -41,5 +41,4 @@ Security groups (networking)
             - Source / Destination (IP, CIDR, hoặc SG khác)
 + Một EC2 có thể gắn nhiều hơn 1 SG
 
-
 - AWS Console
