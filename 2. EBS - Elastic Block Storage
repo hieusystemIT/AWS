@@ -1,0 +1,6 @@
+Elastic Block Storage (EBS)
+Đặc trưng
++ Là một cơ chế lưu trữ dạng block
++ Đơn vị quản lý là các EBS Volume
++ Chỉ có thể access data khi được gắn vào 1 EC2 instance (dùng làm ổ root, C:, hoặc ổ data)
++ Một số loại EBS đặc biệt cho phép gắn vào nhiều hơn 1 EC2 (multi attach).
