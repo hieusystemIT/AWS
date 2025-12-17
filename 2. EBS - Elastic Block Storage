@@ -10,3 +10,10 @@ Tính tiền
 + Dung lượng của volume ($/Gb/month), không dùng hết toàn bộ data cũng mất tiền 100% trên dung lượng đã cấp
 + IOPS: (I/O: Tốc độ đọc ghi của ổ đĩa): Tốc độ đọc ghi càng cao, chi phí càng lớn.
 + Dung lượng của các bản snapshot của ổ cứng ($/Gb/month). Tuy nhiên giá tiền sẽ rẻ hơn lưu trữ
+
+Các loại EBS thường dùng
++ General purpose (default): gp2, gp3: Phù hợp cho hầu hết các mục đích sử dụng
++ IOPS Provisioned: io1, io2: Phù hợp cho các ứng dụng đòi hỏi tốc độ đọc, ghi cao
++ Throughput optimized HDD: dùng cho các hệ thống về Bigdata, data warehouse, cần throughput cao
++ Cold HDD: Lưu trữ giá rẻ cho các file ít khi được access (Vd: File server của công ty)
++ Magnetic: Thế hệ trước của HDD (ít khi được sử dụng)
