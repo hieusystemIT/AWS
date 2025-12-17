@@ -41,4 +41,16 @@ Security groups (networking)
             - Source / Destination (IP, CIDR, hoặc SG khác)
 + Một EC2 có thể gắn nhiều hơn 1 SG
 
-- AWS Console
+EC2 được sử dụng trong các usecase nào ?
+- EC2 là 1 dịch vụ rất mạnh mẽ của AWS, xuất hiện hầu hết trong các hệ thống, ngoài ra EC2 còn là nền tảng của các dịch vụ container như ECS và EKS (k8s)
+Usecase cơ bản
++ chạy các website cơ bản all in one. (Vd: Mô hình LEMP)
++ Compute cluster: dùng cho các ứng dụng chạy xử lý data như Hadoop, Spark,....
++ Dùng làm database trong trường hợp không muốn dùng dịch vụ database có sẵn của AWS
++ Dùng làm node của cluster K8S
+
+Cách tính tiền của EC2
++ On-Demand: Dùng bao nhiêu trả bấy nhiêu
++ Reserve Instance or Saving Plan: Mua trước 1-3 năm hoặc commit số tiền dùng hằng tháng để được AWS discount. So sánh với On-Demand (discount đến 72%). Phù hợp với môi trường Product
++ Spot Instance: Đấu giá để được sử dụng Ec2 vào các khung giờ thấp điểm (Vd: muốn mua 1 con server với giá 0.5$ thì đặt ngưỡng để mua)
++ Dedicated Host: Thuê riêng phần cứng nếu có yêu cầu đặc biệt về compliance. (Rất nhiều tiền)
