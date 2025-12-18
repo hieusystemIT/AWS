@@ -1,1 +1,5 @@
-
+IAM (Viết tắt của Identity and Access Management
+- Nhiệm vụ:
+  - Định danh và phân quyền
+  - Quản lý việc ai (who) và cái gì (what) có thể access như thế nào tới các resources trên AWS
+  - Quản lý một cách tập trung các quyền chi tiết, phân tích truy cập để tinh chỉnh quyền
