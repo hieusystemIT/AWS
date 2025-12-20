@@ -38,3 +38,10 @@ IAM Role
 + Đại diện cho 1 quyền trên AWS. Không giống như khái niệm Role của 1 user như trong phân quyền hệ thống, cần lưu ý để tránh nhầm lẫn.
 + Sử dụng khi muốn cấp quyền cho 1 tài khoản có thể tương tác với các resources khác trên AWS. Thường dùng để gắn vào EC2, Lambda, Container
 + Có thể sử dụng để cấp quyền cho 1 user nằm ở AWS account khác mà không muốn tạo ra user profile cho họ trên account AWS của mình, bằng cách cho phép 1 user assume-role tới 1 role trên account, user có thể có các quyền tạm thời để thực hiện thao tác.
+
+IAM Group
++ Đại diện cho 1 nhóm user trên hệ thống
++ Sử dụng khi muốn phân chia dựa theo vai trò trong dự án, phòng ban,....
++ Một group không thể chứa group khác (lồng nhau)
++ Một user có thể không thuộc group nào hoặc nhiều groups
++ Một group có thể không có user nào hoặc có nhiều users
