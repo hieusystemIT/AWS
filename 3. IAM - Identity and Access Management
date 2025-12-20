@@ -3,3 +3,38 @@ IAM (Viết tắt của Identity and Access Management
   - Định danh và phân quyền
   - Quản lý việc ai (who) và cái gì (what) có thể access như thế nào tới các resources trên AWS
   - Quản lý một cách tập trung các quyền chi tiết, phân tích truy cập để tinh chỉnh quyền
+
+IAM Concept
+- Để có thể thiết ké & xây dựng hệ thống trên AWS đảm bảo tiêu chí về Security cũng như không gặp trouble, cần nắm vững các concept cơ bả của IAM:
++ User
++ Group
++ Role
++ Permission (Policy)
+- IAM Policy
++ Quy định việc ai/cái gì có thể hoặc không làm gì
++ Một policy thường bảo gồm nhiều statement quy định (Allow/Deney hành động trên resource dựa trên condition)
++ Mỗi statement cần định nghĩa các thông tin:
+    | Effct: có 2 loại là Allow & Deny. *Deny được ưu tiên hơn
+    | Action: tập hợp các resource cho phép tương tác
+    | Condition: Điều kiện kèm theo để apply statement này
++ Policy có thể gắn vào Role/Group/User.
+
+IAM Policy
++ Inline Policy: Được đính trực tiếp lên Role/User/Group và không thể tái sử dụng ở Role/User/Group và không thể tái sử dụng ở Role/User/Group khác.
++ Managed Policy: Được tạo riêng và có thể gắn vào nhiều User/Group/Role.
+    - Managed Policy được chia thành 2 loại là AWS Managed và User Managed
++ Việc chọn lựa giữa Inline và Managed phải được tính toán dựa trên các yếu tố như:
+    - Tính tái sử dụng
+    - Quản lí thay đổi tập t rung
+    - Versioning & rollback.
+
+IAM User
++ Đại diện 1 profile của 1 người dùng trên AWS account
++ User có thể login vào AWS Console sử dụng username/passwd
++ User mặc định khi tạo ra sẽ không có quyền gì. Cần cấp quyền cho user thông qua Policy hoặc Group
++ User có thể phát hành access-key/secret-key để sử dụng cho CLI hoặc test SDK trong quá trình test code. Cặp access/secret ky này cũng sẽ đại diện cho user (thay vì dụng username/passwd)
+
+IAM Role
++ Đại diện cho 1 quyền trên AWS. Không giống như khái niệm Role của 1 user như trong phân quyền hệ thống, cần lưu ý để tránh nhầm lẫn.
++ Sử dụng khi muốn cấp quyền cho 1 tài khoản có thể tương tác với các resources khác trên AWS. Thường dùng để gắn vào EC2, Lambda, Container
++ Có thể sử dụng để cấp quyền cho 1 user nằm ở AWS account khác mà không muốn tạo ra user profile cho họ trên account AWS của mình, bằng cách cho phép 1 user assume-role tới 1 role trên account, user có thể có các quyền tạm thời để thực hiện thao tác.
