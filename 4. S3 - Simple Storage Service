@@ -16,3 +16,9 @@ S3: Simple Storage Service
 + Storage managemnet: Cung cấp nhiều tính năng liên quan như: Life Cycle, Object Lock, Replication,.....
 + Access Management: Quản lý truy cập đến bucket và các thư mục thông qua cơ chế resource permission & access list. Block public access, control access via IAM, bucker policy, S3 access point, Access Control List, Ownership, Access Analyzer
 + Data processing: kết hợp với lambda, SNS, SQS để hỗ trợ xử lý data 1 cách nhanh chóng
++ Auto Logging and Monitoring: Cung cấp công cụ monitor S3 bucket và truy vết sử dụng CloudTrail
++ Manual Monitoring Tool: Log lại từng record thực hiện trên bucket
++ Analytic and insight: phân tích storage để optimize
++ Strong consistency: Provice strong read-after-write consistency for PUT and DELETE object
+
+-S3 có thể kết nối với các dịch vụ
