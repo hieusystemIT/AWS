@@ -22,3 +22,15 @@ S3: Simple Storage Service
 + Strong consistency: Provice strong read-after-write consistency for PUT and DELETE object
 
 -S3 có thể kết nối với các dịch vụ
++ EC2, ECS
++ VPC, API GW, ALB
++ Backup
++ Lambda
++ CW, CloudTrail
++ Glu (truy vấn data), .....
++ Dùng làm nơi lưu trữ file cho các ứng dụng chạy trên EC2, Container, Lambda. Các file có thể đa dạng về loại & kích thước (Image, Video, Document,...)
++ Dùng làm nơi chứa/archive log cho hầu hết các dịch vụ khác của AWS (VPC, ALB, APIGateway,.....)
++ Dùng làm data source cho các bài toán big data & data warehouse
++ Nơi lưu dữ liệu gửi lên từ các thiết bị ioT
++ Vùng lưu trữ tạm thời cho bài toàn ELT (Extract - Transfrom - Load) khi kết hợp với lambda
++ Host 1 website tĩnh (html,css,js) khi kết hợp với CloudFront
