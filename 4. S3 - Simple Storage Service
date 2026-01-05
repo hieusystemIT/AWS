@@ -1,1 +1,18 @@
+S3: Simple Storage Service
++ Là dịch vụ lưu trữ dạng Object cung cấp khả năng mở rộng, availability, performance
++ Có thể sử dụng S3 để lưu trữ và bảo vệ nhiều loại data cho các usecase như: data lake, website, mobile, backup&restore, archive, enterprise application, Big Data & Analytic
++ S3 cung cấp nhiều managed feature giúp tối ưu, tổ chức và cấu hình access tới data, đáp ứng nhu cầu về business, organization & complicance
 
+- Đặc trưng cơ bản của S3
++ Là một managed service. User không cần quan tâm đến hạ tầng ở bên dưới.
++ Cho phép lưu file dưới dạng object với size từ 0 - 5Tb
++ Usecase đa dạng (tất cả lưu trữ lớn nhỏ đều có thể sử dụng S3)
++ Cung cấp nhiều class lưu trữ để tiết kiệm chi phí cho từng loại data
++ Cung cấp khả năng phân quyền và giới hạn truy cập một cách chi tiết
++ Dễ sử dụng, có thể kết hợp với nhiều service khác nhau cho bài toàn automation và data processing
+
+- S3 cung cấp các tính năng cơ bản sau
++ Storage classes: cung cấp nhiều hình thức lưu trữ phù hợp cho nhiều loại data khác nhau về như cầu access, yêu cầu về durability, thời gian lưu trữ khác nhau giúp KH tùy chọn được class lưu trữ phù hợp, từ đó tối ưu chi phí
++ Storage managemnet: Cung cấp nhiều tính năng liên quan như: Life Cycle, Object Lock, Replication,.....
++ Access Management: Quản lý truy cập đến bucket và các thư mục thông qua cơ chế resource permission & access list. Block public access, control access via IAM, bucker policy, S3 access point, Access Control List, Ownership, Access Analyzer
++ Data processing: kết hợp với lambda, SNS, SQS để hỗ trợ xử lý data 1 cách nhanh chóng
