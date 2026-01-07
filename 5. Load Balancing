@@ -1,1 +1,15 @@
+LB
+- Khái niệm: "single point of failure"
++ Là cân bằng tải giữa các thiết bị
++ Nếu hệ thống có nhiều hơn 1 thành phần, cầm có 1 cơ chết để phân phối request từ client đến các thành phần ở backend => LB ra đời
++ AWS cho phép dễ dàng setup LB tới nhiều target nằm ở các AZ khác nhau
+    > Mỗi Availability Zone (AZ) tương ứng với 1 data center cách nhau từ vài chúc tới vài trăm km
+    > Bằng việc phân bổ các instance nằm trên nhiều hơn 1 AZ, hệ thống có thể chịu được các sự cố ở cấp độ datacenter của AWS mà vẫn hoạt động bình thường.
 
+Elastic Load Balancing
++ Là một dịch vụ của AWS có nhiệm vụ điều hướng request từ client đến các target backend, đảm bảo request được cân bằng giữa các target.
++ ELB là 1 dịch vụ managed hoàn toàn bời AWS, dễ setup, có đầy đủ các đặc tính cần thiết
+    > High Availability (HA)
+    > Scalability: Về lý thuyết là không giới hạn
+    > High Securrity: Nếu kết hợp với các dịch vụ khác WAF, Security Group
++ ELB có thể dễ dàng kết hợp với đa dạng backend sử dụng EC2, Container, Lambda
