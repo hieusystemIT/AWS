@@ -13,3 +13,25 @@ Elastic Load Balancing
     > Scalability: Về lý thuyết là không giới hạn
     > High Securrity: Nếu kết hợp với các dịch vụ khác WAF, Security Group
 + ELB có thể dễ dàng kết hợp với đa dạng backend sử dụng EC2, Container, Lambda
+
+- Các thành phần cơ bản
++ LB cho phép setting các listener (trên 1 port nào đó http:80/https:443)
++ Request sau khi đi vào listener sẽ được đánh giá bởi các rule sẽ được forward tới target group phù hợp
++ Target group có nhiệm vụ health check để phát hiện và loại bỏ target un-healthy
+
+- Các loại LB
+1. Application Load Balancer
++ Là loại LB thường dùng, phù hợp cho đa số nhu cầu
++ Hoạt động trên layer 7 - Application
++ Có 1 số ưu thế vượt trôi so với các loại LB khác
+2. Network Load Balancer
++ Hoạt động trên layer 4 - transport
++ Hỗ trợ 2 giao thức TCP và UDP
++ Không hỗ trợ nhiều hình thức rule routing
++ Thường dùng cho những hệ thống có workload rất cao, lên đến hàng triệu request/s
+3. Gateway Load Balancer
++ Hoạt động lên layer 3 & 4
+
+- Cross zone LB
++ ELB là 1 dịch vụ hoạt động cross zone (AWS suggest chọn tất cả các zone có thể khi khởi tạo ELB)
++ Nếu Cross zone load balance được enable, ELB sẽ điều hướng request từ client một cách cân bằng tới các target
