@@ -41,3 +41,12 @@ Elastic Load Balancing
 + có 2 hình thức scale:
     1. Scale Up/Down: Tăng/giảm cấu hình của resources (vd: tăng CPU/RAM cho server, db, tăng dung lượng cho ổ cứng,...)
     2. Scale Out/In: Tăng/giảm số lượng thành phần trong 1 cụm chức năng (vd: add thêm server vào cụm applicatinon, add thêm node vào k8s cluster,...)
+
+- Auto Scaling Group
++ Có nhiệm vụ điều chỉnh số lượng của instance cho phù hợp với workload
++ Mục đích:
+    > Tiết kiệm chi phí
+    > Tự động hóa trong việc mở rộng & phục hồi sự cố.
++ ASG sử dụng Launch Template để biết được cần phải launch EC2 như thế nào
++ Để thực hiện được việc scale, ASG phải kết hợp với việc monitor các thông số của các thành phần trong hệ thống để biết được khi nao cần scale-out, khi nào cần scale-in
+=> Sự cần thiết của CloudWatch
