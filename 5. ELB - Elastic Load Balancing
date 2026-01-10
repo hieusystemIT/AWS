@@ -50,3 +50,12 @@ Elastic Load Balancing
 + ASG sử dụng Launch Template để biết được cần phải launch EC2 như thế nào
 + Để thực hiện được việc scale, ASG phải kết hợp với việc monitor các thông số của các thành phần trong hệ thống để biết được khi nao cần scale-out, khi nào cần scale-in
 => Sự cần thiết của CloudWatch
++ Các phương pháp Scale hệ thống
+1. No Scale: Duy trì 1 số lượng cố định instances (nếu instance die thì tạo con mới để bổ sung, ngoài ra không làm gì thêm)
+2. Manually Scaling: điều chỉnh 3 thông số: min/max/desire để quyết định số lượng instance trong ASG
+3. dynamic Scaling: Scale tự động dựa trên việc monitor các thông số
+    > Target tracking scaling: Monitor thông số ngay trên chính cluster (CPU, Memory, Network in-out)
+    > Step scaling: điều chỉnh số lượng instance (up/down) dựa trên 1 tập hợp các alarm (có thể đến từ các resource khác không phải bản thân cluster)
+    > Simple scaling: Tương tự Step scaling tuy nhiên có apply "cool down period"
+    > Schedule Scaling: Đặt lịch để tự động tăng giảm số instance theo thời gian, phù hợp với các hệ thống có workload tăng vào 1 thời điểm cố định trong ngày
+    > Predict Scaling: AWS đưa ra dự đoán từ việc học từ thông số hằng ngày. Độ chính xác phụ thuộc vào thời gian application đã vận hành và tính ổn định của traffic đi vào hệ thống
