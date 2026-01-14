@@ -7,3 +7,20 @@ RDS: Relational Database Service
     1. Scale virical: tăng hoặc giảm cấu hình instance.
     2. Scale horizontal: thêm hoặc bớt node tuy nhiên node này chỉ có thể real (real-replication)
 + Có  giới hạn về dung lượng ổ cứng tối đa (64Tb đối với MySQL, MariaDB,...16Tb đối với Microsoft SQL).
+
+Cung cấp các tính năng cơ bản sau:
++ cho phép tạo các DB instance hoặc cụm cluster một cách nhanh chóng.
++ Tự động fail-over giữa master-slave instance khi có sự cố.
++ High-Availability: Tự động cấu hình instance stand by, người dùng chỉ cần chọn
++ Tự động scale dung lượng lưu trữ (optional)
++ Liên kết với CloudWatch để giám sát dễ dàng.
++ Automate backup & manage retention
++ Dễ dàng chỉnh sửa setting ở cấp độ Database sử dụng paramete group
+
+RDS hỗ trợ các engines sau:
++ Amazon Aurora
++ MySQL
++ MariaDB
++ PostgreSQL
++ Oracle
++ Microsoft SQL Server
