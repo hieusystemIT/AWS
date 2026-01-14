@@ -24,3 +24,14 @@ RDS hỗ trợ các engines sau:
 + PostgreSQL
 + Oracle
 + Microsoft SQL Server
+
+RDS Usecase
++ Được sử dụng hầu hết các trường hợp cần db dạng quan hệ
++ RDS thích hợp cho các bài toàn OLAP (Online Analatical Processing) nhờ khả năng truy vấn mạnh mẽ, cấu hình có thể scale theo yêu cầu
+
+RDS Pricing
++ RDS tính tiền dựa trên các thông số
+    > Instance size: càng lớn thì cost càng cao, có hỗ trợ reserve instance tương tự EC2
+    > Lượng data lưu trữ (Gb/Month)
+    > Dung lượng các bản snapshot được tạo ra
+    > Các tính năng khác Vd: Backtracking đối với Aurora
