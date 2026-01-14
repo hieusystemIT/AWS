@@ -35,3 +35,11 @@ RDS Pricing
     > Lượng data lưu trữ (Gb/Month)
     > Dung lượng các bản snapshot được tạo ra
     > Các tính năng khác Vd: Backtracking đối với Aurora
+
+Các mô hình triển khai
+- RDS có thể được triển khai theo các mô hình sau
++ Single Instance
++ Single Instance with Multi-AZ option = yes
++ Master - Read Only cluster
++ Master - Read Only cluster with Multi-AZ option = yes
++ Master - Multi Read cluster
