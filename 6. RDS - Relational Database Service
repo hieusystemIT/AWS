@@ -43,3 +43,11 @@ Các mô hình triển khai
 + Master - Read Only cluster
 + Master - Read Only cluster with Multi-AZ option = yes
 + Master - Multi Read cluster
+
+Mô hình triển khai RDS
+- Nên tạo RDS Cluster hay RDS Instance ?
++ AWS cugn cấp cơ chế cho phép tạo ra 1 cluster RDS giúp quản lý node và failover dẽ dàng hơn
++ Ưu điểm so với việc tạo RDS instance thông thường
+    + Quản lý endpoint ở cấp độ cluster, không bị thay đổi khi instance trong cluster gặp sự cố
+    + Failover tự động
+    + Scale read instance dễ dàng
