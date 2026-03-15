@@ -52,4 +52,7 @@ Mô hình triển khai RDS
     + Failover tự động
     + Scale read instance dễ dàng
 
-    aaa aaa 
+Tính năng RDS snapshot
+- Cơ chế giúp recovery database
+- Giúp recovery khi snapshot được tạo ra
+- Được tạo ra bởi backup service
