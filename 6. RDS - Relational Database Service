@@ -51,4 +51,3 @@ Mô hình triển khai RDS
     + Quản lý endpoint ở cấp độ cluster, không bị thay đổi khi instance trong cluster gặp sự cố
     + Failover tự động
     + Scale read instance dễ dàng
-Analatical
