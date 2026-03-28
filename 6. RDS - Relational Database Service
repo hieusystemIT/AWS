@@ -67,3 +67,8 @@ Aurora
     + Hỗ trợ Backtracking (1 tính năng cho phép revert database về trạng thái trong quá khứ, tối đa 72h). Khác với restore từ snapshot đòi
     hỏi tạo instance mơi, Backtracking restore ngay trên chính cluster đang chạy
     + Tự động quản lý Write endpoint, Read endpoint ở cấp độ cluster
+
+Aurora/Mô hình cluster của Aurora
+- 1 Master node (Primary instance)
+- 1 hoặc nhieefui Replication node (tối đa 15 node)
+
